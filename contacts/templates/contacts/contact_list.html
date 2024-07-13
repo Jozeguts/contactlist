@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact list</title>
+</head>
+<body>
+    <h1>Contact list </h1>
+    <ul>
+        {% for contact in contacts %}
+        <li>
+            <a href="{% url 'contact_create' %}">
+                {{contact.first_name}} {{contact.last_name}}
+            </a>
+        </li>
+        {% endfor %}
+            
+    </ul>
+    <a href="{% url 'contact_create' %}">Add New  Contact</a>
+</body>
+</html>
